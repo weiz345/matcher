@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#543d53">
+  <title>Hinge Mini · A little more connection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#discover">hinge<span>mini</span></a>
+    <p class="tagline">A little more connection.</p>
+    <nav aria-label="Main navigation">
+      <a href="#discover" data-nav="discover"><span>✧</span> Discover</a>
+      <a href="#likes" data-nav="likes"><span>♡</span> Likes you <b id="like-count">0</b></a>
+      <a href="#matches" data-nav="matches"><span>☏</span> Matches <b id="match-count">0</b></a>
+      <a href="#profile" data-nav="profile"><span>☺</span> Your profile</a>
+    </nav>
+    <div class="database-panel"><small id="database-status" role="status">Connecting…</small><button id="refresh" type="button">Refresh</button></div>
+    <div class="sidebar-bottom"><span class="small-avatar">♡</span><div id="signed-in">Your next chapter</div></div>
+  </aside>
+  <main id="app" tabindex="-1"></main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="like-dialog"><form id="like-form">
+    <button class="close" type="button" aria-label="Close">×</button>
+    <span class="eyebrow">MAKE THE FIRST MOVE</span><h2>A little hello goes a long way.</h2>
+    <p id="like-context"></p>
+    <label for="comment">Add a comment <span class="muted">(optional)</span></label>
+    <textarea id="comment" maxlength="300" rows="3" placeholder="What caught your attention?"></textarea>
+    <button class="primary" type="submit">Send like ♡</button>
+  </form></dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
